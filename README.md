@@ -1,5 +1,5 @@
 # shots
-Lista com os shots mais populares<p>
+Lista com os shots mais populares.<p>
 
 Para executar a aplicação rode os seguintes comandos:<br>
 1) npm install;<br>
