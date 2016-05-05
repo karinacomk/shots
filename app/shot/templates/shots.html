@@ -1,0 +1,89 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+   <i class="fa fa-pencil" aria-hidden="true"></i> Shots
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+        <li class="active"><i class="fa fa-pencil" aria-hidden="true"></i> Shots</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="col-md-12">
+        <div class="box box-warning">
+        <div class="box-header with-border">
+            <i class="fa fa-list"> </i>
+            <h3 class="box-title" ng-if="!viewDetalhe">Shots mais populares</h3>
+            <h3 class="box-title" ng-if="viewDetalhe">Detalhes</h3>
+            <!-- /.box-tools -->
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body no-padding">
+            <div class="mailbox-controls">
+            <!-- Check all button -->
+
+            </div>
+            <div class="box-body">
+                <div class="row">
+                  <div class="col-md-4" ng-repeat="shot in shots" ng-if="!viewDetalhe"> 
+                      <div class="box box-widget widget-user-2">
+                        <!-- Add the bg color to the header using any of the bg-* classes -->
+                        <div class="widget-user-header">
+                            <a href="#" ng-click="detalhes(shot.id)">
+                                <center><img src="{{shot.images.teaser}}" class="img-responsive"></center>
+                            </a>
+                        </div>
+                        <div class="box-footer no-padding">
+                          <ul class="nav nav-stacked">
+                            <li>
+                                <a href="#" ng-click="detalhes(shot.id)"><i class="fa fa-eye" aria-hidden="true"></i>
+                                <span class="pull-right badge bg-yellow">{{shot.views_count}}</span></a>
+                            </li>                           
+                          </ul>
+                        </div>
+                      </div>
+                  </div>
+
+                    <div class="col-md-12" ng-if="viewDetalhe"> 
+                      <div class="box box-widget">
+                         <div class="box box-widget widget-user-2">
+                        <!-- Add the bg color to the header using any of the bg-* classes -->
+                            <div class="widget-user-header">
+                              <div class="widget-user-image">
+                                <img alt="User Avatar" src="{{shot.user.avatar_url}}" class="img-responsive">
+                              </div>
+                              <!-- /.widget-user-image -->
+                              <h3 class="widget-user-username">{{shot.title}}</h3>
+                              <h5 class="widget-user-desc">By {{shot.user.name}}</h5>
+                            </div>
+                       </div>
+                      </div>
+                    </div>
+                
+            </div>
+            <!-- /.mail-box-messages -->
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer no-padding">
+            <div class="mailbox-controls">
+            <!-- Check all button -->
+
+            </div>
+        </div>
+        </div>
+        <!-- /. box -->
+
+         <div class="box-footer" ng-if="viewDetalhe">
+                <button class="btn btn-app" ng-click="alteraViewDetalhe()">
+                    <i class="fa fa-arrow-left"></i> Voltar
+                </button>   
+         </div>
+    </div>
+
+
+</section>
+
+
+<!-- /.content -->

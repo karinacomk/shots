@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Dribbble</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  
+  <base href="/">
+  <!-- CSS -->
+  <link rel="stylesheet" href="bower_components/AdminLTE/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="bower_components/AdminLTE/dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="bower_components/AdminLTE/dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="bower_components/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
+</head>
+<body class="hold-transition skin-yellow sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <a href="#" class="logo bg-black">
+      <span class="logo-mini"><b></i></b></span>
+      <span class="logo-lg"><b><small>Dribbble</b></small></span>
+    </a>
+    <nav class="navbar navbar-static-top bg-black" role="navigation">
+      <a href="#" class="sidebar-toggle bg-black" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <aside class="main-sidebar">
+    <section class="sidebar">
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="assets/img/profile-icon.png" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>Administrador</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="header">Menu</li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+            <span>Shots</span> <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a ui-sref="shots"><i aria-hidden="true" class="fa fa-eye"></i> Mais Populares</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </aside>
+
+  <div class="content-wrapper">
+          <div ui-view></div>   
+  </div>
+  
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 0.0.1
+    </div>
+    <strong>Copyright &copy; 2016 Karina de Almeida LIma </strong> All rights
+    reserved.
+  </footer>
+
+  <aside class="control-sidebar control-sidebar-dark">
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+  </aside>
+  <div class="control-sidebar-bg"></div>
+</div>
+
+<!-- JS -->
+<script src="/bower_components/AdminLTE/plugins/jQuery/jQuery-2.2.0.min.js"></script>
+<script src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+
+<script src="bower_components/AdminLTE/bootstrap/js/bootstrap.min.js"></script>
+<script src="bower_components/AdminLTE/plugins/knob/jquery.knob.js"></script>
+<script src="bower_components/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<script src="bower_components/AdminLTE/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="bower_components/AdminLTE/plugins/fastclick/fastclick.js"></script>
+<script src="bower_components/AdminLTE/dist/js/app.min.js"></script>
+<script src="bower_components/AdminLTE/dist/js/demo.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="app.module.js"></script>
+<script src="shot/shot.module.js"></script>
+<script src="shot/shot.route.js"></script>
+<script src="shot/shot.service.js"></script>
+<script src="shot/shot.controller.js"></script>
+</body>
+</html>
