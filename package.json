@@ -1,13 +1,13 @@
 {
-  "name": "modulo-seguranca-web",
+  "name": "shots",
   "version": "0.0.0",
-  "description": "Módulo de Segurança Web",
+  "description": "Shorts mais populares",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "Ferramentas Web",
+  "author": "Karina de Almeida Lima",
   "license": "ISC",
   "dependencies": {
     "express": "^4.13.4"
